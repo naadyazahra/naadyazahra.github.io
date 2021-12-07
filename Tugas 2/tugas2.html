@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+
+body {
+  background-image: url("https://i.pinimg.com/originals/f9/49/c8/f949c8139770a539f056a8383ba04825.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: width:100%;height:auto;
+  font-size: 20px;
+  
+}
+
+.form{width: 500px; margin: auto}
+
+.fieldset {
+  padding: 1em;
+  font-family: "Times New Roman", Times, serif;
+  border:2px solid #993399;
+  }
+
+.label {
+  width:25%;
+  margin-right:0.5em;
+  padding-top:0.2em;
+  text-align:right;
+  font-size: 20px;
+  }
+
+.legend {
+  padding: 0.2em 0.5em;
+  border:2px solid #993399;
+  color:black;
+  font-size:100%;
+  text-align:right;
+  }
+  
+ h1 {
+  font-family: 'Abril Fatface', serif;
+  font-size: 46px;  
+  
+}
+ 
+ <!-- Add icon library -->
+
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #602060;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+.input-field:focus {
+  border: 2px solid #602060;
+}
+
+/* Set a style for the submit button */
+.btn {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  background-color: #602060;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+</style>
+
+<body>
+
+<form action="daftar.php" class=form method=post>
+<h1 align="center"><style="alignment-baseline:">Formulir Registrasi</font></h1>
+
+ <fieldset class=fieldset>
+	<legend class=legend align=center><b>Akun</b></legend>
+	
+		<div class="input-container">
+		<i class="fa fa-user icon"></i>
+		<input class="input-field" type="text" placeholder="Username" name="usrnm" required>
+		</div>
+
+		<div class="input-container">
+		<i class="fa fa-envelope icon"></i>
+		<input class="input-field" type="email" pattern=".+@gmail\.com" placeholder="Email" name="email" required>
+		</div>
+  
+		<div class="input-container">
+		<i class="fa fa-key icon"></i>
+		<input class="input-field" type="password" placeholder="Password" name="psw" required>
+		</div>
+
+ </fieldset>
+  
+  <br></br>
+  
+ <fieldset class=fieldset>
+	<legend class=legend align=center><b>Data</b></legend>
+	
+	<table border="0" align="center">
+		<tr>
+			<td><label class=label for="nama">Nama</label></td>
+			<td><input type="text" id="nama" name="nama" required></td>
+		</tr>
+		<tr>
+			<td><label class=label for="kelamin">Jenis kelamin</label></td>
+			<td><input type="radio" id="pria" name="jk"><label for="pria">Pria</label>
+			</br><input type="radio" id="wanita" name="jk"><label for="wanita">Wanita</label></td>
+		</tr>
+		<tr>
+			<td><label class=label for="ttl">TTL</label></td>
+			<td><input type="date" size="30" name="ttl"/></td>
+		</tr>
+		<tr>
+			<td><label class=label for="alamat">Alamat</label></td>
+			<td><textarea name="alamat"></textarea></td>
+		</tr>
+		<tr>
+			<td>
+			<label class=label for="agama">Agama</label>
+				<td>
+				<select name="agama">
+					<option value="islam">Islam</option>
+					<option value="kristen">Kristen</option>
+					<option value="hindu">Hindu</option>
+					<option value="budha">Budha</option>
+				</select>
+				</td>
+			</td>
+		</tr>
+		<tr>
+			<td><label class=label for="info">Bidang yang disukai</label><br></td>
+			<td>
+				<input type="checkbox" id="olahraga" name="info1">
+ 				<label for="olahraga">Olahraga</label>
+				</br>
+				<input type="checkbox" id="teknologi" name="info2">
+ 				<label for="teknologi">Teknologi</label>
+				</br>
+				<input type="checkbox" id="kesehatan" name="info3">
+ 				<label for="kesehatan">Kesehatan</label>
+				</br>
+				<input type="checkbox" id="bisnis" name="info4">
+ 				<label for="bisnis">Bisnis</label>
+				</br>
+				<input type="checkbox" id="pendidikan" name="info5">
+ 				<label for="pendidikan">Pendidikan</label>
+			</td>
+		</tr>
+		<tr>
+			<td><label class=label for="biografi">Biografi</label></td>
+			<td><textarea name="biografi"></textarea></td>
+		</tr>
+
+	</table>
+	
+  </fieldset>
+  
+  </br>
+	<table align=center>
+	<tr>
+ 	<td><input type="submit" class="btn" value="Submit"></td>
+	<td><input type="reset" class="btn" value="Reset"></td>
+	</tr>
+</table>
+	
+</form>
+
+</body>
+</html>
